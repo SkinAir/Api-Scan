@@ -16,7 +16,6 @@ banner = '''\033[1;33;40m
 /    |    \    |   |   |
 \____|__  /____|   |___|
         \/              
-Have fun. Don't forget t
 '''
 
 def examples():
@@ -30,9 +29,10 @@ def examples():
         for exp in payload:
             exp = exp.strip('\n')
             response = requests.get(urls+exp, headers=headers, timeout=15,verify=False)
+            size = len(response.text)
             if response.status_code == 200:
             #if response.status_code == 200:
-                print(u'\033[1;31;40m[+]{} is may exists'.format(urls))
+                print(u'\033[1;31;40m[+]  Size:[{}] {} is may exists'.format(size,urls))
                 print(response.text)
                 with open('./APIresult.txt','a') as f:
                     f.write('[+]' + urls + exp)
