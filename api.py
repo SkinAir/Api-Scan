@@ -35,7 +35,7 @@ def examples():
                 print(u'\033[1;31;40m[+]  Size:[{}] {} is may exists'.format(size,urls))
                 print(response.text)
                 with open('./APIresult.txt','a') as f:
-                    f.write('[+]' + urls + exp)
+                    f.write('[+]'+ '[' + str(size) + ']' + urls + exp)
                     f.write('\n')
             else:
                 print('\033[1;32;40m[-]None: {}'.format(urls)+ exp)
