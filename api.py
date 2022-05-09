@@ -20,7 +20,7 @@ banner = '''\033[1;33;40m
 
 def examples():
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36"}
-    with open(r'C:\Users\28564\Desktop\python-exp\ms-T\Exp.txt','r')as f:
+    with open(r'./Exp.txt','r')as f:
         payload = f.readlines()
     # payload = '/swagger/index.html'
     # poc = urls + payload
